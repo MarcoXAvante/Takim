@@ -1,0 +1,44 @@
+<ion-content>
+  <div class="general">
+    <form [formGroup]="userForm">
+      <br>
+      <div class="fields">
+        <ion-item lines="full">
+          <ion-label position='floating'>Nom:</ion-label>
+          <ion-input type="string" formControlName="Name" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Cognom:</ion-label>
+          <ion-input type="string" formControlName="Surname" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Sexe:</ion-label>
+          <ion-input type="string" formControlName="Gender" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Data de naixement:</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" formControlName="Birthdate" required></ion-datetime>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Municipi:</ion-label>
+          <ion-input type="string" formControlName="Hometown" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Correu electrònic:</ion-label>
+          <ion-input type="email" formControlName="Email" #email required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Contrasenya:</ion-label>
+          <ion-input type="password" formControlName="Password" #password required></ion-input>
+        </ion-item>
+      </div>
+      <br>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" (click)="CreateRecord()" expand="block">Registra't!
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

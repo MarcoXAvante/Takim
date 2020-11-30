@@ -1,0 +1,20 @@
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position='floating'>Correu electrònic:</ion-label>
+      <ion-input type="email" #email required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position='floating'>Contrasenya:</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button class="login" type="submit" (click)="onLogin(email, password)"
+        expand="block">Inicia sessió
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <ion-button class="registre" (click)="redirRegistre()">Encara no ets usuari? REGISTRA'T</ion-button>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>eregister</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="general">
+    <form>
+      <br>
+      <div class="fields">
+        <h3>Secció d'usuari</h3>
+        <ion-item lines="full">
+          <ion-label position='floating'>Nom:</ion-label>
+          <ion-input type="string" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Cognom:</ion-label>
+          <ion-input type="string" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Sexe:</ion-label>
+          <ion-input type="string" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Data de Naixement:</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" required></ion-datetime>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Municipi:</ion-label>
+          <ion-input type="string" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Correu electrònic:</ion-label>
+          <ion-input type="email" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Contrasenya:</ion-label>
+          <ion-input type="password" required></ion-input>
+        </ion-item>
+        <h3>Secció d'empresa</h3>
+      </div>
+      <br>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" (click)="CreateRecordUser()" expand="block">Registra't!
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

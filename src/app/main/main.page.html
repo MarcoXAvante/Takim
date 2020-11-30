@@ -1,0 +1,16 @@
+<ion-content>
+  <ion-grid class="espaititol">
+      <img src="../../assets/img/titol2.png" alt="">
+  </ion-grid>
+  <ion-searchbar class="search" showCancelButton="focus" [(ngModel)]="filterTerm">
+  </ion-searchbar>
+  <ion-list id="Cities">
+    <ion-item *ngFor="let data of townList | filter:filterTerm">
+      <ion-label>
+        <ion-text color="primary">
+          <a (click)="prova()">{{ data.Nom }}, {{ data.Comarca }}</a>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+ </ion-content>
