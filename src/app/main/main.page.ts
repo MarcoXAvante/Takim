@@ -44,8 +44,10 @@ export class MainPage implements OnInit {
       this.setfilterTown(search);
     })
   }
-  prova() {
-    this.router.navigate(['ciutats'])
+
+  prova(town) {
+    // Afegim el nom de la ciutat a la ruta (però aconsello posar un id o uuid)
+    this.router.navigate(['ciutats', { id: town.Nom}])
   }
   filterTown(searchTerm) {
   return this.townList.filter(town => {

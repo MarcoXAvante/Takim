@@ -4,11 +4,13 @@
   </ion-grid>
   <ion-searchbar class="search" showCancelButton="focus" [(ngModel)]="filterTerm">
   </ion-searchbar>
-  <ion-list id="Cities">
+  <!--Amb el *ngIf podem posar les condicions, en aquest cas el condicionant és que filterTerm tingui algun valor-->
+  <ion-list id="Cities" *ngIf="filterTerm">
     <ion-item *ngFor="let data of townList | filter:filterTerm">
       <ion-label>
         <ion-text color="primary">
-          <a (click)="prova()">{{ data.Nom }}, {{ data.Comarca }}</a>
+          <!-- Li passem els valors de la ciutat seleccionada a la funció prova -->
+          <a (click)="prova(data)">{{ data.Nom }}, {{ data.Comarca }}</a>
         </ion-text>
       </ion-label>
     </ion-item>
