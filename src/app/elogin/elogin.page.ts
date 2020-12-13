@@ -4,17 +4,16 @@ import { AuthService } from '../services/auth.service';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-elogin',
+  templateUrl: './elogin.page.html',
+  styleUrls: ['./elogin.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class EloginPage implements OnInit {
 
   constructor(private authSvc: AuthService, private router: Router, private location: Location) { }
 
   ngOnInit() {
   }
-
   async onLogin(email, password) {
     try{
       const user = await this.authSvc.login(email.value, password.value);
@@ -33,15 +32,16 @@ export class LoginPage implements OnInit {
 
   private redirectUser(isVerified:boolean){
     if(isVerified){
-      this.router.navigate(['user'])
+      this.router.navigate(['ehome'])
     } else {
       this.router.navigate(['verificar'])
     }
   }
   private redirectRegistre(){
-    this.router.navigate(['register'])
+    this.router.navigate(['eregister'])
   }
   backClicked() {
     this.location.back();
   }
+
 }

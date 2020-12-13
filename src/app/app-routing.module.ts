@@ -28,7 +28,19 @@ const routes: Routes = [
     loadChildren: () => import('./ciutats/ciutats.module').then( m => m.CiutatsPageModule)
   },
   {
+    path: 'ciutats/:id',
+    loadChildren: () => import('./ciutats/ciutats.module').then( m => m.CiutatsPageModule)
+  },
+  {
     path: 'categories',
+    loadChildren: () => import('./categories/categories.module').then( m => m.CategoriesPageModule)
+  },
+  {
+    path: 'categories/:id',
+    loadChildren: () => import('./categories/categories.module').then( m => m.CategoriesPageModule)
+  },
+  {
+    path: 'categories/:id/:categoria',
     loadChildren: () => import('./categories/categories.module').then( m => m.CategoriesPageModule)
   },
   {
@@ -38,6 +50,14 @@ const routes: Routes = [
   {
     path: 'eregister',
     loadChildren: () => import('./eregister/eregister.module').then( m => m.EregisterPageModule)
+  },
+  {
+    path: 'elogin',
+    loadChildren: () => import('./elogin/elogin.module').then( m => m.EloginPageModule)
+  },
+  {
+    path: 'ehome',
+    loadChildren: () => import('./ehome/ehome.module').then( m => m.EhomePageModule)
   }
 ];
 @NgModule({

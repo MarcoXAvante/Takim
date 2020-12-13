@@ -1,22 +1,27 @@
 .general{
     margin-top: 5%;
-    width: 82%;
+    max-height: 60%;
+    width: 88%;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 5%;
+    border-radius: 5%; 
 }
 form{
     background-color: white;
-    max-height: 70%;
-    width: 82%;
+    max-height: 50%;
+    width: 88%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5%;
-    overflow: scroll;
+    box-sizing: content-box;
 }
 .fields{
-    overflow: scroll;
-    max-height: 70%;
+    width:88%;
+    max-height: 65vh;
+    overflow:scroll;
+}
+h4{
+    text-decoration:underline;
 }
 ion-item {
     width: 80%;

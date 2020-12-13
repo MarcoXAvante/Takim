@@ -1,9 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-grid class="espaititol2">
+    <img class="titol2" src="../../assets/img/titol2.png" alt="">
+    <img class="iconap2" src="../../assets/img/poblet.png" alt="">
+  </ion-grid>
+  <section class="iconselect">
+    <div (click)="redirectLogin()" class="usericon">
+      <div class="orangebg">
+        <img src="../assets/img/usuari.png" alt="User Icon">
+      </div>
+      <p>Usuari</p>
+    </div>
+    <div (click)="redirectELogin()" class="bicon">
+      <div class="bluebg">
+        <img src="../../assets/img/empresa.png" alt="Business Icon">
+      </div>
+      <p>Empresa</p>
+    </div>
+  </section>
 </ion-content>

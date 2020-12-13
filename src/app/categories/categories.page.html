@@ -1,32 +1,33 @@
 <ion-content>
-  <ion-grid class="espaititol">
+  <img class="fletxa" (click)="backClicked()" src="../../assets/img/fletxa.png" alt="">
+  <ion-grid class="espaititol3">
     <img src="../../assets/img/titol2.png" alt="">
   </ion-grid>
   <div class="espaipoble">
-    <div><span id="ciutat"></span></div>
+      <div><span>{{ id }}</span></div>
   </div>
   <br>
   <div class="espaiespecialitat">
-    <div><span id="especialitat"></span></div>
+    <div><span id="especialitat">{{ id2 }}</span></div>
   </div>
     <section id="c2201">
         <section id="alimentacio2201">
             <div class="contenidor">
                 <div class="botons5">
-                    <div >
-                        <button id="fruita2201" onclick="colorOneA()"><img class="iconafruita" src="../../assets/img/fruita.png" alt="fruita.png"></button>
-                    </div>
-                    <div >
-                        <button id="carn2201" onclick="colorTwoA()"><img class="iconacarn" src="../../assets/img/carn.png" alt="carn.png"></button>
+                    <div>
+                        <button id="fruita" (click)="colorA()"><img class="iconafruita" src="../../assets/img/fruita.png" alt="fruita.png"></button>
                     </div>
                     <div>
-                        <button id="peix2201" onclick="colorThreeA()"><img class="iconapeix" src="../../assets/img/peix.png" alt="peix.png"></button>
-                    </div>
-                    <div >
-                        <button id="pa2201" onclick="colorFourA()"><img class="iconareposteria" src="../../assets/img/reposteria.png" alt="pa.png"></button>
+                        <button id="carn" (click)="colorB()"><img class="iconacarn" src="../../assets/img/carn.png" alt="carn.png"></button>
                     </div>
                     <div>
-                        <button id="super2201" onclick="colorFiveA()"><img class="iconasuper" src="../../assets/img/super.png" alt="super.png"></button>
+                        <button id="peix" (click)="colorC()"><img class="iconapeix" src="../../assets/img/peix.png" alt="peix.png"></button>
+                    </div>
+                    <div >
+                        <button id="pa" (click)="colorD()"><img class="iconareposteria" src="../../assets/img/reposteria.png" alt="pa.png"></button>
+                    </div>
+                    <div>
+                        <button id="super" (click)="colorE()"><img class="iconasuper" src="../../assets/img/super.png" alt="super.png"></button>
                     </div>
                 </div>
                 <div id="llistata2201">

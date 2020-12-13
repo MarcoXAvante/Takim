@@ -24,6 +24,7 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
 ion-content {
   --background: none;
   background-image: url("assets/img/background.png");
@@ -31,12 +32,58 @@ ion-content {
   background-repeat: no-repeat;  
   background-position: center center;
   font-family: "Nixie One";
-};
+}
 .espaititol{
   text-align: center;
-  margin: 50px 0px 0px -10px;
+  margin: 5% 0px 0px -10px;
   width: 80%;
-  padding: 20px 5% 20px 10%;
+  padding: 2.5% 5% 2.5% 30%;
   background-color: #34b0b4;
   border-radius: 0px 30px 30px 0px;
+}
+.espaititol2{
+  text-align: center;
+  margin: 5% 0px 0px 0px;
+  width: 100%;
+  background-color: #34b0b4;
+}
+.titol2{
+  width:65%;
+  margin-left:auto;
+}
+.iconap2{
+  width:20%;
+  margin: 0 0 0 5%;
+}
+.espaititol3{
+  text-align: center;
+  margin: 2.5% 0px 0px -10px;
+  height: 17%;
+  width: 90%;
+  padding: 2.5% 5% 2.5% 30%;
+  background-color: #34b0b4;
+  border-radius: 0px 30px 30px 0px;
+}
+.fletxa{
+  margin: 5% 0 0 1%;
+  width: 8%;
+}
+.espaiespecialitat {
+  background-color: #e45e5e;
+  border-radius: 0px 30px 30px 0px;
+  margin: -20px 0px 0px -10px;
+  width:32.5%;
+  max-width: 32.5%;
+  position: absolute;
+  padding: 20px 5% 20px 5%;
+}
+.espaipoble {
+  background-color: #ffbd59;
+  border-radius: 0px 30px 30px 0px;
+  margin: -5% 0px 0px -10px;
+  width:50%;
+  max-width: 50%;
+  position: absolute;
+  padding: 20px 5% 20px 5%;
+  text-align:right;
 }

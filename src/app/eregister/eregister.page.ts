@@ -13,6 +13,21 @@ interface UserData {
   Email: string;
   Password: string;
 }
+interface EmpresaData {
+  EName: string;
+  NIF: string;
+  Municipi: string;
+  Adreca: string;
+  Email: string;
+  TPublic: string;
+  TPrivat: string;
+  Categories: string;
+  Web: string;
+  Treballadors: number;
+  Horari: string;
+  Times: string;
+  Code: string;
+}
 
 @Component({
   selector: 'app-eregister',
@@ -24,6 +39,10 @@ export class EregisterPage implements OnInit {
   userList = [];
   userData: UserData;
   userForm: FormGroup;
+
+  EmpresaList = [];
+  EmpresaData: EmpresaData;
+  EmpresaForm: FormGroup;
 
   constructor(
     private authSvc: AuthService,
@@ -43,12 +62,15 @@ export class EregisterPage implements OnInit {
       Hometown: ['', [Validators.required]],
       Email: ['', [Validators.required]],
       Password: ['', [Validators.required]],
+    });
+    this.EmpresaForm = this.fb.group({
+      
     })
   }
   redirectRUser() {
     this.router.navigate([])
   }
-  CreateRecordUser() {
+  CreateRecordEmpresa() {
     try{
     this.authSvc.register(this.userForm.controls.Email.value, this.userForm.controls.Password.value);
     this.firebaseService.create_user(this.userForm.value)}

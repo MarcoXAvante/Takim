@@ -1,15 +1,11 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>eregister</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <div class="general">
     <form>
       <br>
       <div class="fields">
-        <h3>Secció d'usuari</h3>
+        <ion-item>
+          <h4>Secció d'usuari</h4>
+        </ion-item>
         <ion-item lines="full">
           <ion-label position='floating'>Nom:</ion-label>
           <ion-input type="string" required></ion-input>
@@ -28,7 +24,7 @@
         </ion-item>
         <ion-item lines="full">
           <ion-label position='floating'>Municipi:</ion-label>
-          <ion-input type="string" required></ion-input>
+          <ion-input type="search" required></ion-input>
         </ion-item>
         <ion-item lines="full">
           <ion-label position='floating'>Correu electrònic:</ion-label>
@@ -38,12 +34,66 @@
           <ion-label position='floating'>Contrasenya:</ion-label>
           <ion-input type="password" required></ion-input>
         </ion-item>
-        <h3>Secció d'empresa</h3>
+        <ion-item>
+          <h4>Secció d'empresa</h4>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Nom de l'empresa:</ion-label>
+          <ion-input type="string" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>NIF:</ion-label>
+          <ion-input type="string" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Municipi:</ion-label>
+          <ion-input type="string" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Adreça de l'empresa:</ion-label>
+          <ion-input type="password" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Correu electrònic:</ion-label>
+          <ion-input type="email" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Telèfon públic:</ion-label>
+          <ion-input type="" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Telèfon privat:</ion-label>
+          <ion-input type="tel" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Categories:</ion-label>
+          <ion-input type="string" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Enllaç web:</ion-label>
+          <ion-input type="url" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Nombre treballadors:</ion-label>
+          <ion-input type="number" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Horari:</ion-label>
+          <ion-input type="search" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>Horari d'obertura:</ion-label>
+          <ion-input type="password" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position='floating'>CODI D'ACCÉS:</ion-label>
+          <ion-input type="password" required></ion-input>
+        </ion-item>
       </div>
       <br>
       <ion-row>
         <ion-col>
-          <ion-button type="submit" (click)="CreateRecordUser()" expand="block">Registra't!
+          <ion-button type="submit" (click)="CreateRecordEmpresa()" expand="block">Registra't!
           </ion-button>
         </ion-col>
       </ion-row>

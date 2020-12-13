@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { FirebaseService } from '../services/firebase.service';
 import { Router } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 interface UserData {
   Name: string;
@@ -21,11 +22,13 @@ interface UserData {
 })
 export class SignInPage implements OnInit {
 
+  townList = [];
   userList = [];
   userData: UserData;
   userForm: FormGroup;
 
   constructor(
+    private firestore: AngularFirestore,
     private authSvc: AuthService,
     private firebaseService: FirebaseService,
     private router:Router,
@@ -43,6 +46,16 @@ export class SignInPage implements OnInit {
       Hometown: ['', [Validators.required]],
       Email: ['', [Validators.required]],
       Password: ['', [Validators.required]],
+    })
+    this.firestore.collection('municipis').snapshotChanges().subscribe(data => {
+      this.townList = data.map(e => {
+        return {
+          Nom: e.payload.doc.data()['Nom'],
+          Comarca: e.payload.doc.data()['Comarca'],
+        }
+      })
+      this.townList.sort((a,b) => a.Nom.localeCompare(b.Nom));
+      console.log(this.townList);
     })
   }
   redirectRUser() {
