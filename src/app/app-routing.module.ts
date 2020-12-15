@@ -22,11 +22,6 @@ const routes: Routes = [
     path: 'ciutats',
     loadChildren: () => import('./ciutats/ciutats.module').then( m => m.CiutatsPageModule)
   },
-  // Acceptem un id per paràmetre de la url per posteriorment demanar les dades d'aquesta ciutat
-  {
-    path: 'ciutats/:id',
-    loadChildren: () => import('./ciutats/ciutats.module').then( m => m.CiutatsPageModule)
-  },
   {
     path: 'ciutats/:id',
     loadChildren: () => import('./ciutats/ciutats.module').then( m => m.CiutatsPageModule)
